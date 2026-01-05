@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Freitas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particulas"></div>
+
+    <!-- Seção cabeçalho-->
+    <nav class="navegacao">
+        <ul class="navegacao-lista">
+            <li><a href="#inicio" class="navegacao-paginas">Inicio</li></a>
+            <li><a href="#sobre" class="navegacao-paginas">Sobre</li></a>
+            <li><a href="#projetos" class="navegacao-paginas">Projetos</li></a>
+            <li><a href="#contato" class="navegacao-paginas">Contato</li></a>
+        </ul>
+    </nav>
+    
+    <!-- Seção Perfil-->
+    <main id="inicio" class="perfil-secao">
+            <img src="./img/foto1.jpg" alt="foto perfil" class="perfil-fotos">
+            <h1 class="perfil-titulo">Rafael Freitas</h1>
+            <p class="perfil-paragrafo">Desenvolvedor Full-stack</p>
+    </main>
+
+    <!-- Seção Sobre-->
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eum magni aperiam ratione inventore ea tenetur numquam debitis cupiditate tempore provident, rem temporibus eos dolorem corporis voluptatem nobis sapiente a?</p>
+        </div>
+    </section>
+
+    <!-- Seção Projetos-->
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-cards">
+                <img src="img/foto4.jpg" alt="projetos-img" class="projetos-img">
+                <h4 class="projetos-subtitulo">Loja de Carros</h4>
+                <p class="projetos-paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sint perspiciatis iure placeat iusto amet eaque molestiae nam doloremque, est repudiandae, asperiores, a culpa! Officia, inventore unde. Optio, voluptatem recusandae.</p>
+            </div>
+            <div class="projetos-cards">
+                <img src="img/foto4.jpg" alt="projetos-img" class="projetos-img">
+                <h4 class="projetos-subtitulo">Página de viagens</h4>
+                <p class="projetos-paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sint perspiciatis iure placeat iusto amet eaque molestiae nam doloremque, est repudiandae, asperiores, a culpa! Officia, inventore unde. Optio, voluptatem recusandae.</p>
+            </div>
+            <div class="projetos-cards">
+                <img src="img/foto4.jpg" alt="projetos-img" class="projetos-img">
+                <h4 class="projetos-subtitulo">Microsoft</h4>
+                <p class="projetos-paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sint perspiciatis iure placeat iusto amet eaque molestiae nam doloremque, est repudiandae, asperiores, a culpa! Officia, inventore unde. Optio, voluptatem recusandae.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Formulario-->
+    <section id="contato" class="secao-contato">
+        <h2 class="contato-titulo">Entre em Contato</h2>
+        
+        <form class="contato-formulario" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+               <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- Seção rodapé-->
+    <footer class="rodape">
+        <div rodape-criador>
+        <p class="rodape-paragrafo">2025 - Rafael Freitas</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+
+</body>
+</html>

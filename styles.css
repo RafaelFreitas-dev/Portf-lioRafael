@@ -1,0 +1,274 @@
+/*
+    *{ --> é usado como configuração geral no inicio do html
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+    /* funções para uma rolagem-navegaçao mais suave com o mouse*/
+    scroll-behavior: smooth;
+}
+
+/* root = raiz --> colocar variavel direto na raiz raiz  */
+:root{  
+    --primaria: #13001f;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --cinza-escuro: #373738;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.096);
+}
+
+body{
+    background-color: var(--primaria);
+    color: var(--claro);
+}
+
+.navegacao{
+    position: fixed;
+    top: 0;
+    background-color: var(--vidro);
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+.navegacao-lista{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 20px;
+    gap: 3rem;
+}
+
+.navegacao-paginas{
+    position: relative;
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: 500px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+.navegacao-paginas::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secundaria);
+    transition: width .5s ease;
+}
+
+.navegacao-paginas:hover::after{
+    width: 100%;
+}
+
+.perfil-secao{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.perfil-fotos{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: -2px 11px 47px 9px rgba(18, 3, 231, 0.445); /* sombra azul ao redor da foto */
+    border: 4px solid var(--vidro);
+    margin-bottom: 20px;
+    animation: transformY 3s ease infinite;
+}
+
+@keyframes transformY {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.perfil-titulo{
+    font-size: 3.5rem;
+    color: var(--claro);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.perfil-paragrafo{
+    font-size: 1.5rem;
+    color: var(--claro);
+    
+}
+
+.sobre{
+    padding: 6rem 2rem;
+}
+.sobre-titulo{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sobre-caixa{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--escuro);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-color: var(--vidro);
+}
+
+.sobre-paragrafo{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.projetos{
+    padding: 6rem 2rem;
+}
+
+.projetos-titulo{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projetos-caixa{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-cards{
+    background-color: var(--vidro);
+    border-radius: 10px;
+    border: 1px solid var(--escuro);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: transform .3s ease;
+    cursor: pointer;
+}
+
+.projetos-cards:hover{
+    transition: transform .3s ease;
+    transform: scale(1.05);
+}
+
+.projetos-img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projetos-subtitulo{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.projetos-paragrafo{
+    font-size: 1rem;
+    margin: 10px 10px;
+    padding-bottom: 10px;
+    line-height: 1.25rem;
+}
+
+.secao-contato{
+    padding: 6rem 2rem;
+}
+
+.contato-titulo{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contato-formulario{
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--vidro);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+.campo-form{
+    width: 100%;
+    padding: 1rem;
+    background: var(--vidro);
+    border-radius: 8px;
+    border: 1px solid var(--vidro);
+    color: var(--claro);
+    outline: none;    
+}
+
+.campo-form:focus{
+    border-color: var(--secundaria);
+}
+.grupo-form{
+    margin-bottom: 1rem;
+}
+
+.botao-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--claro);
+    background: var(--secundaria);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background .5s ease;
+}
+
+.botao-form:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4); /* sombra roxa ao redor do botão */
+}
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background:
+    radial-gradient(circle at 10% 20%, rgba(35, 35, 221, 0.349) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(35, 35, 221, 0.349) 0%, transparent 40%); /* gradientes radiais para simular partículas */
+
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--vidro);
+    color: var(--claro);
+    margin-top: 2rem;
+    font-size: 16px;
+}
